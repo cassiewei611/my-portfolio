@@ -16,22 +16,30 @@ export const resume: {
   github: string
   linkedin: string
   location: string
+  aboutLead: string
+  aboutBody: string
+  aboutTags: string[]
   about: string[]
   education: { degree: string; school: string; period: string; gpa?: string; highlights: string[] }[]
   languages: { name: string; level: string }[]
+  hobbies: { name: string; emoji: string }[]
   skills: { category: string; items: string[] }[]
   experience: { company: string; role: string; type: string; period: string; description: string[] }[]
   projects: Project[]
 } = {
   name: 'Cassie Wei',
   fullName: 'Chuanyu (Cassie) Wei',
-  title: 'Full Stack Developer',
-  roles: ['Full Stack Developer', 'Software Engineer', 'Tech Consultant'],
+  title: 'Software Engineer',
+  roles: ['Software Engineer', 'Technical Consultant'],
   email: 'cassiewei06@gmail.com',
   phone: '+45 50391418',
   github: 'https://github.com/cassiewei611',
   linkedin: 'https://linkedin.com/in/chuanyu-wei',
   location: 'Copenhagen, Denmark',
+
+  aboutLead: 'I build clean, user-friendly digital products from end to end.',
+  aboutBody: 'With hands-on experience in full-stack development, CMS migration, and workflow automation — I bridge technical depth with cross-functional communication.',
+  aboutTags: ['Full-Stack Dev', 'Technical Consulting', 'Cross-functional Communication'],
 
   about: [
     "I'm a Software Design MSc student at IT University of Copenhagen with hands-on experience in full-stack development and technical consulting.",
@@ -52,8 +60,9 @@ export const resume: {
     },
     {
       degree: 'B.S. in Arts and Literature',
-      school: 'Nankai University, China',
+      school: 'Nankai University',
       period: 'Sep 2018 — Jul 2022',
+      gpa: '88 /100 ',
       highlights: [
         'Specialized in modern cultural theory, visual culture, and media studies',
         'Developed strong communication, research, and analytical skills',
@@ -64,7 +73,14 @@ export const resume: {
   languages: [
     { name: 'Chinese', level: 'Native' },
     { name: 'English', level: 'C2 — Full Professional' },
-    { name: 'Danish', level: 'A1 — Elementary' },
+    { name: 'Danish', level: 'A2 — Elementary' },
+  ],
+
+  hobbies: [
+    { name: 'Hiking', emoji: '🥾' },
+    { name: 'Badminton', emoji: '🏸' },
+    { name: 'Traveling', emoji: '✈️' },
+  
   ],
 
   skills: [
@@ -74,11 +90,11 @@ export const resume: {
     },
     {
       category: 'Backend',
-      items: ['Node.js', 'Python', 'PostgreSQL', 'REST APIs', 'Contentful CMS'],
+      items: ['Node.js', 'Java(SpringBoot)', 'C#(.Net)','PostgreSQL', 'REST APIs', 'Contentful CMS'],
     },
     {
-      category: 'Tools & Platforms',
-      items: ['Git', 'Docker', 'PowerBI', 'VS Code', 'Jira', 'CI / CD'],
+      category: 'Tools',
+      items: ['Git', 'Docker', 'PowerBI', 'VS Code', 'Jira', 'CI / CD','Claude Code'],
     },
     {
       category: 'Soft Skills',
