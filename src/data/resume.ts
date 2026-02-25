@@ -149,30 +149,35 @@ export const resume: {
       description:
         'Conversational AI application for relationship advice with multi-turn dialogue, RAG-based knowledge retrieval via PGVector, and Tool Calling for personalised date planning. Implements a ReAct-pattern autonomous agent capable of self-directed planning, web search, and PDF report generation.',
       tech: ['Java 21', 'Spring Boot 3', 'Spring AI', 'LangChain4j', 'PGVector', 'PostgreSQL'],
+      github: 'https://github.com/cassiewei611/yu-ai-agent',
     },
     {
       title: 'From Lockdowns to Recovery',
       description:
         'Data analysis research project processing 300M+ mobility records to quantify travel willingness across 10,000+ census tracts. Trained and compared regression and Random Forest models (R²=0.9989), and built weighted mobility graphs to compute destination value scores across ~20.5M census tract pairs.',
       tech: ['Python', 'Pandas', 'GeoPandas', 'NetworkX', 'Scikit-learn', 'Matplotlib'],
+      github: 'https://github.com/cassiewei611/Research-Project',
     },
     {
       title: 'TrackIt — Subscription & Budget Tracker',
       description:
         'Full-stack application following Clean Architecture with CQRS pattern using MediatR, FluentValidation, Entity Framework Core, and JWT authentication. React frontend with multi-currency support via Open Exchange Rates API and an interactive spending analytics dashboard.',
       tech: ['ASP.NET Core 8', 'C#', 'React', 'TypeScript', 'SQL Server'],
+      github: 'https://github.com/cassiewei611/TrackIt',
     },
     {
       title: 'MuseMove — Web Shop',
       description:
         'Full-stack e-commerce web shop with UI/UX designed in Figma. Built a RESTful API for products, users, and shopping carts, using React functional components, Formik and Yup for form validation, and Context API for state management.',
       tech: ['TypeScript', 'React', 'Node.js', 'Express.js', 'RESTful API'],
+      github: 'https://github.com/cassiewei611/Webshop',
     },
     {
       title: 'Petish — Pet Events Social Platform',
       description:
         'Full-stack social platform for pet owners to discover and join local events. Features user authentication, profile management, event RSVP, comment system, and ACL-based access control with Back4App (Parse Server) for cloud storage and image uploads.',
       tech: ['React', 'Node.js', 'Express.js', 'Parse Server', 'Back4App', 'Tailwind CSS'],
+      github: 'https://github.com/cassiewei611/Group3-2024TID',
     },
   ],
 }
