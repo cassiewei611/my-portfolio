@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react'
+import { useState } from 'react'
 import FadeIn from './ui/FadeIn'
 import SectionHeading from './ui/SectionHeading'
 import { resume } from '@/data/resume'
@@ -7,13 +7,7 @@ import { HiMail } from 'react-icons/hi'
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false)
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    // For now, just show success state
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 3000)
-  }
+  const [loading, setLoading] = useState(false)
 
   return (
     <section id="contact" className="px-6 py-20 md:py-28">
@@ -21,13 +15,32 @@ export default function Contact() {
         <SectionHeading title="Get in Touch" subtitle="I'd love to hear from you" />
 
         <FadeIn>
-          <form onSubmit={handleSubmit} className="space-y-5">
+          <form
+            action="https://formspree.io/f/mdalyvep"
+            method="POST"
+            onSubmit={async (e) => {
+              e.preventDefault()
+              setLoading(true)
+              const res = await fetch('https://formspree.io/f/mdalyvep', {
+                method: 'POST',
+                body: new FormData(e.currentTarget),
+                headers: { Accept: 'application/json' },
+              })
+              setLoading(false)
+              if (res.ok) {
+                setSubmitted(true)
+                ;(e.target as HTMLFormElement).reset()
+              }
+            }}
+            className="space-y-5"
+          >
             <div>
               <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-text-primary">
                 Name
               </label>
               <input
                 id="name"
+                name="name"
                 type="text"
                 required
                 className="w-full rounded-xl border border-morandi-sand/60 bg-cream-dark/40 px-4 py-3 text-text-primary outline-none transition-colors placeholder:text-text-secondary/50 focus:border-primary"
@@ -41,6 +54,7 @@ export default function Contact() {
               </label>
               <input
                 id="email"
+                name="email"
                 type="email"
                 required
                 className="w-full rounded-xl border border-morandi-sand/60 bg-cream-dark/40 px-4 py-3 text-text-primary outline-none transition-colors placeholder:text-text-secondary/50 focus:border-primary"
@@ -54,6 +68,7 @@ export default function Contact() {
               </label>
               <textarea
                 id="message"
+                name="message"
                 rows={5}
                 required
                 className="w-full resize-none rounded-xl border border-morandi-sand/60 bg-cream-dark/40 px-4 py-3 text-text-primary outline-none transition-colors placeholder:text-text-secondary/50 focus:border-primary"
@@ -63,12 +78,12 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="relative w-full overflow-hidden rounded-xl bg-primary py-3 font-medium text-white transition-all hover:shadow-lg hover:shadow-primary/20"
+              disabled={loading || submitted}
+              className="relative w-full overflow-hidden rounded-xl bg-primary py-3 font-medium text-white transition-all hover:shadow-lg hover:shadow-primary/20 disabled:opacity-70"
             >
-              {/* Shimmer effect */}
               <span className="absolute inset-0 animate-shimmer bg-gradient-to-r from-transparent via-white/20 to-transparent bg-[length:200%_100%]" />
               <span className="relative">
-                {submitted ? 'Message Sent!' : 'Send Message'}
+                {submitted ? '✓ Message Sent!' : loading ? 'Sending...' : 'Send Message'}
               </span>
             </button>
           </form>

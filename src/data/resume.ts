@@ -59,10 +59,10 @@ export const resume: {
       ],
     },
     {
-      degree: 'B.S. in Arts and Literature',
+      degree: 'B.S. in Linguistics and Literature',
       school: 'Nankai University',
       period: 'Sep 2018 — Jul 2022',
-      gpa: '88 /100 ',
+      gpa: '88.06 / 100',
       highlights: [
         'Specialized in modern cultural theory, visual culture, and media studies',
         'Developed strong communication, research, and analytical skills',
@@ -86,24 +86,25 @@ export const resume: {
   skills: [
     {
       category: 'Frontend',
-      items: ['React', 'TypeScript', 'Next.js', 'HTML / CSS', 'Tailwind CSS', 'Figma to Code'],
+      items: ['React', 'TypeScript', 'Next.js', 'HTML / CSS', 'Tailwind CSS', 'Figma', 'Redux'],
     },
     {
       category: 'Backend',
-      items: ['Node.js', 'Java(SpringBoot)', 'C#(.Net)','PostgreSQL', 'REST APIs', 'Contentful CMS'],
+      items: ['Node.js', 'Java / Spring Boot', 'C# / .NET', 'Kotlin', 'Python', 'PostgreSQL', 'SQL Server', 'REST APIs', 'Spring AI', 'LangChain4j'],
     },
     {
       category: 'Tools',
-      items: ['Git', 'Docker', 'PowerBI', 'VS Code', 'Jira', 'CI / CD','Claude Code'],
+      items: ['Git', 'Docker', 'Linux', 'AWS', 'CI / CD', 'PowerShell', 'Bash', 'Jira', 'Confluence', 'VS Code'],
     },
     {
       category: 'Soft Skills',
       items: [
+        'Agile / Scrum',
         'Cross-functional Communication',
-        'Problem Solving',
-        'Process Documentation',
+        'Requirements Analysis',
+        'Process Optimization',
         'Stakeholder Coordination',
-        'International Collaboration',
+        'Documentation',
       ],
     },
   ],
@@ -115,8 +116,8 @@ export const resume: {
       type: 'Part-time',
       period: 'Aug 2024 — Present',
       description: [
-        'Coordinated weekly exercises and provided feedback to improve student learning outcomes.',
-        'Designed and delivered hands-on workshops on Git and LaTeX to support technical skill development.',
+        'Conducted weekly live coding sessions and exercise walkthroughs for courses in math, SQL & databases, data structures and algorithms, web development (React), and mobile app development (Kotlin).',
+        'Designed and delivered hands-on workshops on PowerShell, Bash, Git, and LaTeX to strengthen students\' development toolchain proficiency.',
       ],
     },
     {
@@ -134,42 +135,44 @@ export const resume: {
       company: 'Meritco Services',
       role: 'Technical Consultant',
       type: 'Internship',
-      period: 'Jan 2023 — Jun 2023',
+      period: 'Jan 2023 — Apr 2023',
       description: [
-        'Delivered 3+ automated workflow configurations by translating business requirements into technical specifications.',
-        'Facilitated cross-functional workshops between business users, developers, and stakeholders.',
-        'Created comprehensive documentation including process maps, trigger logic, and configuration guides.',
+        'Conducted structured desk research to identify and screen industry experts across consumer and financial sectors, managing a pipeline of 20+ expert profiles per project.',
+        'Coordinated expert interviews for consulting teams, synthesizing transcripts into structured research notes to support client deliverables.',
       ],
     },
   ],
 
   projects: [
     {
-      title: 'Developer Portfolio',
+      title: 'AI Love Advisor',
       description:
-        'Personal portfolio website built with React, TypeScript, and Tailwind CSS featuring smooth scroll animations and a Morandi color palette.',
-      tech: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-      github: 'https://github.com/cassiewei611/my-portfolio',
+        'Conversational AI application for relationship advice with multi-turn dialogue, RAG-based knowledge retrieval via PGVector, and Tool Calling for personalised date planning. Implements a ReAct-pattern autonomous agent capable of self-directed planning, web search, and PDF report generation.',
+      tech: ['Java 21', 'Spring Boot 3', 'Spring AI', 'LangChain4j', 'PGVector', 'PostgreSQL'],
     },
     {
       title: 'From Lockdowns to Recovery',
       description:
-        'Research project analyzing 300M+ mobility records with automated data processing pipelines, validation rules, and geospatial visualizations.',
-      tech: ['Python', 'Pandas', 'NetworkX', 'GeoPandas'],
+        'Data analysis research project processing 300M+ mobility records to quantify travel willingness across 10,000+ census tracts. Trained and compared regression and Random Forest models (R²=0.9989), and built weighted mobility graphs to compute destination value scores across ~20.5M census tract pairs.',
+      tech: ['Python', 'Pandas', 'GeoPandas', 'NetworkX', 'Scikit-learn', 'Matplotlib'],
     },
     {
-      title: 'Beauty Clinic Booking System',
+      title: 'TrackIt — Subscription & Budget Tracker',
       description:
-        'Full-stack booking platform for a beauty clinic with appointment scheduling, user authentication, and admin dashboard.',
-      tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Tailwind CSS'],
-      github: 'https://github.com/cassiewei611/beauty-clinic-frontend',
+        'Full-stack application following Clean Architecture with CQRS pattern using MediatR, FluentValidation, Entity Framework Core, and JWT authentication. React frontend with multi-currency support via Open Exchange Rates API and an interactive spending analytics dashboard.',
+      tech: ['ASP.NET Core 8', 'C#', 'React', 'TypeScript', 'SQL Server'],
     },
     {
-      title: 'HomeSwap',
+      title: 'MuseMove — Web Shop',
       description:
-        'A home-swapping platform enabling users to list properties and arrange exchanges for travel accommodation.',
-      tech: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL'],
-      github: 'https://github.com/cassiewei611/homeswap',
+        'Full-stack e-commerce web shop with UI/UX designed in Figma. Built a RESTful API for products, users, and shopping carts, using React functional components, Formik and Yup for form validation, and Context API for state management.',
+      tech: ['TypeScript', 'React', 'Node.js', 'Express.js', 'RESTful API'],
+    },
+    {
+      title: 'Petish — Pet Events Social Platform',
+      description:
+        'Full-stack social platform for pet owners to discover and join local events. Features user authentication, profile management, event RSVP, comment system, and ACL-based access control with Back4App (Parse Server) for cloud storage and image uploads.',
+      tech: ['React', 'Node.js', 'Express.js', 'Parse Server', 'Back4App', 'Tailwind CSS'],
     },
   ],
 }
